@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
-import bagel from './bagel.jpg'
+import logo from './logo.jpg'
 
 const Container = styled.div`
     width: 100%;
@@ -79,7 +79,7 @@ const Slider = () => {
         <Wrapper>
             <Slide>
                 <ImageContainer>
-                    <Image src={bagel} />
+                    <Image src={logo} />
                 </ImageContainer>
                 <InfoContainer>
                     <Title>Hot Damn Bagels</Title>
