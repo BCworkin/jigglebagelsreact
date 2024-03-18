@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
+import bagel from './bagel.jpg'
 
 const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     position: relative;
-    background-color: #FFFF8F;
 `
 
 const Arrow = styled.div`
@@ -28,17 +28,70 @@ const Arrow = styled.div`
     opacity: 1;
 `
 
+const Wrapper = styled.div`
+    height: 100%;
+`
+
+const Slide = styled.div`
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+`
+
+const ImageContainer = styled.div`
+    height: 100vw;
+    flex: 1;
+`
+
+const Image = styled.image`
+    height: 80%;
+`
+
+const InfoContainer = styled.div`
+    flex: 1;
+`
+
+const Title = styled.h1`
+    font-size: 70px;
+`
+
+const Desc = styled.p`
+    margin: 50px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+`
+
+const Button = styled.button`
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+`
+
 const Slider = () => {
   return (
     <Container>
         <Arrow direction="left">
             <FaArrowLeft></FaArrowLeft>
         </Arrow>
+        <Wrapper>
+            <Slide>
+                <ImageContainer>
+                    <Image src={bagel} />
+                </ImageContainer>
+                <InfoContainer>
+                    <Title>Hot Damn Bagels</Title>
+                    <Desc>Get your bagels now! We have deals paired with sour cream!</Desc>
+                    <Button>Show me!</Button>
+                </InfoContainer>
+            </Slide>
+        </Wrapper>
         <Arrow direction="right">
             <FaArrowRight></FaArrowRight>
         </Arrow>
     </Container>
-
   )
 }
 
