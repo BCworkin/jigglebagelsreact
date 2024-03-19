@@ -57,6 +57,9 @@ const Input = styled.input`
 const MenuItem = styled.div`
     font-size: 18px;
     cursor: pointer;
+    &:hover {
+        border-bottom: 2px solid #333;
+    }
     margin: 12px;
 `
 
