@@ -12,9 +12,10 @@ const moveBanner = keyframes`
 
 const Container = styled.div`
     height: 30px;
+    width: 100vw;
     background-color: darksalmon;
     color: black;
-    padding: 3px;
+    /* padding: 3px; */
     /* display: flex; */
     align-items: center;
     justify-content: center;
@@ -22,7 +23,7 @@ const Container = styled.div`
 
 const Sentence = styled.div`
   font-size: 14px;
-  animation: ${moveBanner} 20s linear infinite ;
+  animation: ${moveBanner} 16s linear infinite ;
 `
 
 const Announcement = () => {
