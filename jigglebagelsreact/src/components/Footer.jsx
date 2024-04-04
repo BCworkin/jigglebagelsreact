@@ -1,27 +1,86 @@
-import { Button } from '@mui/material'
 import React from 'react'
-import { FaArrowRight, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    height:100vw;
+    background-color: lightblue;
+    display: flex;
+    height: 150vh; 
+`;
+
+
+const Left = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 `
 
-const Left = styled.div``
+const Center = styled.div`
+flex: 1;
+    
+`
+    
+const Title = styled.h1`
+`
 
-const Title = styled.div``
+const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+`
 
-const InputContainer = styled.div``
+const ListItem = styled.li`
+    width: 75%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+        border-bottom: 2px solid #333;
+    }    
+`
 
-const Input = styled.div``
+const InputContainer = styled.div`
+    /* border: 1px solid black; */
+    display: inline-flex;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px;
+    max-width: 300px;
+    
+`
 
-const Center = styled.div``
+const Input = styled.input`
+    border: none;
+    outline: none;
+    width: 100%;
+`
 
-const SocialContainer = styled.div``
+const SocialContainer = styled.div`
+display: inline-flex;
+padding: 30px;
+`
 
-const SocialIcon = styled.div``
+const SocialIcon = styled.div`
+    font-size: 20px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+`
 
-const Right = styled.div``
+const ContactItem = styled.div`
+    width: 75%;
+    margin-bottom: 10px;
+    font-size: 18px;
+`
+
+const Right = styled.div`
+    flex: 1;
+`
 
 
 const Footer = () => {
@@ -30,13 +89,8 @@ const Footer = () => {
         <Left>
             <Title>Subscribe to us!</Title>
             <InputContainer>
-                <Input placeholder="Eter your email"></Input>
+                <Input type="text" placeholder="Enter your email"></Input>
             </InputContainer>
-            <Button>
-                <FaArrowRight/>
-            </Button>
-        </Left>
-        <Center>
             <SocialContainer>
                 <SocialIcon>
                     <FaFacebook/>
@@ -48,9 +102,23 @@ const Footer = () => {
                     <FaTiktok/>
                 </SocialIcon>
             </SocialContainer>
+        </Left>
+        <Center>
+            <Title>Connect with us!</Title>
+            <List>
+                <ListItem>Home</ListItem>
+                <ListItem>FAQ</ListItem>
+                <ListItem>Terms</ListItem>
+                <ListItem>Delivery Areas</ListItem>
+            </List>
         </Center>
         <Right>
-
+            <Title>
+                Contact
+            </Title>
+            <ContactItem>Ampang Hill</ContactItem>
+            <ContactItem>+6012345678</ContactItem>
+            <ContactItem>contact@gmail.com</ContactItem>
         </Right>
 
     </Container>

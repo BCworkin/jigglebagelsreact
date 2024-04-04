@@ -12,13 +12,12 @@ const moveBanner = keyframes`
 
 const Container = styled.div`
     height: 30px;
-    width: 100vw;
+    width: 100%;
     background-color: darksalmon;
     color: black;
-    /* padding: 3px; */
-    /* display: flex; */
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 ` 
 
 const Sentence = styled.div`
