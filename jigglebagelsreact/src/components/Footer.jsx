@@ -5,9 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
     background-color: lightblue;
     display: flex;
-    height: 150vh; 
 `;
-
 
 const Left = styled.div`
     flex: 1;
@@ -18,6 +16,8 @@ const Left = styled.div`
 
 const Center = styled.div`
 flex: 1;
+    flex-direction: column;
+    padding: 40px;
     
 `
     
@@ -63,7 +63,8 @@ display: inline-flex;
 padding: 30px;
 `
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.a`
+    color: black;
     font-size: 20px;
     padding: 10px;
     width: 40px;
@@ -80,6 +81,10 @@ const ContactItem = styled.div`
 
 const Right = styled.div`
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
 `
 
 
@@ -92,10 +97,10 @@ const Footer = () => {
                 <Input type="text" placeholder="Enter your email"></Input>
             </InputContainer>
             <SocialContainer>
-                <SocialIcon>
+                <SocialIcon href="https://www.facebook.com/profile.php?id=100094400286206">
                     <FaFacebook/>
                 </SocialIcon>
-                <SocialIcon>
+                <SocialIcon href="https://www.instagram.com/jigglebagel/">
                     <FaInstagram/>
                 </SocialIcon>
                 <SocialIcon>
@@ -120,7 +125,6 @@ const Footer = () => {
             <ContactItem>+6012345678</ContactItem>
             <ContactItem>contact@gmail.com</ContactItem>
         </Right>
-
     </Container>
     )
 }

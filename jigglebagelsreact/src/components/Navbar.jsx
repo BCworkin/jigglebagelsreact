@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { FaSearch, FaShoppingCart } from "react-icons/fa"
 import { Badge } from "@mui/material"
 
@@ -39,9 +39,9 @@ const Right = styled.div`
     justify-content: flex-end;
 `
 
-const Logo = styled.h1`
-    font-weight: bold;
-`
+// const Logo = styled.h1`
+//     font-weight: bold;
+// `
 
 const SearchContainer = styled.div`
     /* border: 1px solid black; */
@@ -63,6 +63,35 @@ const MenuItem = styled.div`
     }
     margin: 12px;
 `
+
+const jiggleAnimation = keyframes`
+    0% {
+    transform: translateX(0);
+    }
+    25% {
+    transform: translateX(-3px);
+    }
+    50% {
+    transform: translateX(3px);
+    }
+    75% {
+    transform: translateX(-3px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+`;
+
+const Logo = styled.h1`
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease; 
+
+    &:hover {
+    animation: ${jiggleAnimation} 0.5s ease infinite; 
+    }
+`;
 
 const Navbar = () => {
   return (

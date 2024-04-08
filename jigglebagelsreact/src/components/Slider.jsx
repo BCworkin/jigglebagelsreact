@@ -5,7 +5,7 @@ import bagel from './bagel.jpg'
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     position: relative;
 `
@@ -77,9 +77,9 @@ const Button = styled.button`
 const Slider = () => {
   return (
     <Container>
-        <Arrow direction="left">
+        {/* <Arrow direction="left">
             <FaArrowLeft />
-        </Arrow>
+        </Arrow> */}
         <Wrapper>
             <Slide>
                 <ImageContainer>
@@ -92,9 +92,9 @@ const Slider = () => {
                 </InfoContainer>
             </Slide>
         </Wrapper>
-        <Arrow direction="right">
+        {/* <Arrow direction="right">
             <FaArrowRight />
-        </Arrow>
+        </Arrow> */}
     </Container>
   )
 }
